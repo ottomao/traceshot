@@ -90,9 +90,6 @@
     if([segue.destinationViewController isKindOfClass:[CaptureResultViewController class]]){
         CaptureResultViewController *dest = segue.destinationViewController;
         dest.shotMgr = self.shotMgr;
-    }else if([segue.destinationViewController isKindOfClass:[CaptureWelcomeViewController class]]){
-        NSLog(@"backing");
-        [self stopTesting];
     }
 }
 
