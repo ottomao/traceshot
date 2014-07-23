@@ -31,9 +31,9 @@ setTimeout(function() {
 */
 setTimeout(function(){
 
-	// console.log("===test stop_task api===");
-	// clientUtil.startNewTest("http://www.amazon.com",0.5,10);	
-	// clientUtil.stopTask();	
-	// clientUtil.queryStatus();
+	console.log("===test stop_task api===");
+	clientUtil.startNewTest("http://www.amazon.com",0.5,10);	
+	clientUtil.stopTask();	
+	clientUtil.queryStatus();
 
-},10 * 1000);
+},12 * 1000);
