@@ -47,7 +47,7 @@
 		843B272B1973C904004CD663 /* CustomURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomURLProtocol.m; sourceTree = "<group>"; };
 		8474F4EE196E4163005A4F4D /* CaptureWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureWelcomeViewController.h; sourceTree = "<group>"; };
 		8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureWelcomeViewController.m; sourceTree = "<group>"; };
-		84B3DCC7196CE37000FE1A06 /* webCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B3DCC7196CE37000FE1A06 /* Traceshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traceshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3DCCA196CE37000FE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84B3DCCC196CE37000FE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		84B3DCCE196CE37000FE1A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -121,7 +121,7 @@
 		84B3DCC8196CE37000FE1A06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84B3DCC7196CE37000FE1A06 /* webCapture.app */,
+				84B3DCC7196CE37000FE1A06 /* Traceshot.app */,
 				84B3DCE8196CE37000FE1A06 /* webCaptureTests.xctest */,
 			);
 			name = Products;
@@ -217,7 +217,7 @@
 			);
 			name = webCapture;
 			productName = webCapture;
-			productReference = 84B3DCC7196CE37000FE1A06 /* webCapture.app */;
+			productReference = 84B3DCC7196CE37000FE1A06 /* Traceshot.app */;
 			productType = "com.apple.product-type.application";
 		};
 		84B3DCE7196CE37000FE1A06 /* webCaptureTests */ = {
@@ -473,7 +473,7 @@
 				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
 				INFOPLIST_FILE = "webCapture/webCapture-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Traceshot;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -488,7 +488,7 @@
 				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
 				INFOPLIST_FILE = "webCapture/webCapture-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Traceshot;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
