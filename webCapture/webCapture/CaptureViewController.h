@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CaptureResultViewController.h"
 #import "CaptureScreenshotManager.h"
+#import "CaptureWelcomeViewController.h"
 
 @interface CaptureViewController : UIViewController <CaptureScreenshotManagerDelegate>
 @property (strong, nonatomic) UIWebView *mainWebView;

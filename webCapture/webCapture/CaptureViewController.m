@@ -86,15 +86,13 @@
     [self updateTipFromTimeInterval:remainingTime];
 }
 
-- (IBAction)cancelLoading:(id)sender {
-    [self stopTesting];
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.destinationViewController isKindOfClass:[CaptureResultViewController class]]){
         CaptureResultViewController *dest = segue.destinationViewController;
         dest.shotMgr = self.shotMgr;
+    }else if([segue.destinationViewController isKindOfClass:[CaptureWelcomeViewController class]]){
+        NSLog(@"backing");
+        [self stopTesting];
     }
 }
 

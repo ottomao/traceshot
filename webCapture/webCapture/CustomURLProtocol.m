@@ -13,9 +13,7 @@
 @implementation CustomURLProtocol
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request{
-    //NSLog(@"req can init: %@" , request.URL);
     if([NSURLProtocol propertyForKey:PROTOCOL_MARK inRequest:request]){
-//        NSLog(@"skip : %@",request.URL );
         return NO;
     }
 
@@ -30,17 +28,15 @@
     
     [mutableReq setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
     
-    NSLog(@"canonical req url : %@",mutableReq.URL);
+//    NSLog(@"canonical req url : %@",mutableReq.URL);
     return [mutableReq copy];
 }
 
 + (BOOL)requestIsCacheEquivalent:(NSURLRequest *)a toRequest:(NSURLRequest *)b{
-//    NSLog(@"ask if equal");
     return NO;
 }
 
 - (void) startLoading{
-//    NSLog(@"start loading , url : %@",self.request.URL );
     NSMutableURLRequest *newRequest = [self.request mutableCopy];
     [NSURLProtocol setProperty:@YES forKey:PROTOCOL_MARK inRequest:newRequest];
     
