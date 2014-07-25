@@ -11,10 +11,13 @@
 @implementation ViewToImage
 + (UIImage*)captureScreen:(UIView*) viewToCapture
 {
+    UIImage *viewImage;
     UIGraphicsBeginImageContext(viewToCapture.bounds.size);
     [viewToCapture.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+
+    
     return viewImage;
 }
 

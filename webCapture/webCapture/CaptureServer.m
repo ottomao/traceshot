@@ -38,12 +38,13 @@
     // Create server
     self.webServer = [[GCDWebServer alloc] init];
     
+    __weak CaptureServer *weakSelf = self;
     // Add a handler to respond to GET requests on any URL
     [self.webServer addDefaultHandlerForMethod:@"GET"
                                   requestClass:[GCDWebServerRequest class]
                                   processBlock:^GCDWebServerResponse *(GCDWebServerRequest* request) {
                                       //log
-                                      [self outputLog:[NSString stringWithFormat:@"req : %@",[request.URL absoluteString] ] ];
+                                      [weakSelf outputLog:[NSString stringWithFormat:@"req : %@",[request.URL absoluteString] ] ];
                                       
                                       NSDictionary *query = request.query;
                                       NSMutableDictionary *res = [@{ @"success": @NO} mutableCopy];
@@ -54,31 +55,31 @@
                                        
                                           @try{
                                               res[@"success"] = @YES;
-                                              res[@"taskId"] = [NSNumber numberWithInt:[self startShotingWithUrl:testUrl
+                                              res[@"taskId"] = [NSNumber numberWithInt:[weakSelf startShotingWithUrl:testUrl
                                                                                                   captureInterva:[[NSString stringWithFormat:@"%@",query[@"interval"]] doubleValue]
                                                                                                     testDuration:[[NSString stringWithFormat:@"%@",query[@"duration"]] doubleValue]
                                                                                         ]
                                                                 ];
-                                              [self outputLog:[NSString stringWithFormat:@"starting task #%@ : %@ ",res[@"taskId"],testUrl]];
+                                              [weakSelf outputLog:[NSString stringWithFormat:@"starting task #%@ : %@ ",res[@"taskId"],testUrl]];
                                           }
                                           @catch(NSException *e){
                                               res[@"success"] = @NO;
                                               res[@"reason"]  = [e reason];
-                                              [self outputLog:[NSString stringWithFormat:@"failed to start task : %@",[e reason]]];
+                                              [weakSelf outputLog:[NSString stringWithFormat:@"failed to start task : %@",[e reason]]];
                                           }
                                           
                                       }else if([actionName isEqualToString:SERVER_ACTION_STATUS]){
                                           res[@"success"] = @YES;
-                                          if(self.status == STATUS_IDLE){
+                                          if(weakSelf.status == STATUS_IDLE){
                                               res[@"isIdle"] = @YES;
                                           }else{
                                               res[@"isIdle"]      = @NO;
-                                              res[@"currentTaskId"] = [NSNumber numberWithInt:self.currentTaskId];
+                                              res[@"currentTaskId"] = [NSNumber numberWithInt:weakSelf.currentTaskId];
                                        
                                           }
                                       }else if([actionName isEqualToString:SERVER_ACTION_FETCH]){
-                                          if([self.testResult count] > 0){
-                                              NSDictionary *result = [self.testResult lastObject];
+                                          if([weakSelf.testResult count] > 0){
+                                              NSDictionary *result = [weakSelf.testResult lastObject];
                                               if([[result objectForKey:@"success"] boolValue]){
                                                   res[@"success"]   = @YES;
                                                   res[@"taskId"]    = result[@"taskId"];
@@ -94,8 +95,8 @@
                                           
                                       }else if([actionName isEqualToString:SERVER_ACTION_FORCE_STOP]){
                                           res[@"success"]     = @YES;
-                                          res[@"stoppedTask"] = [NSNumber numberWithInt:self.currentTaskId];
-                                          [self stopTest];
+                                          res[@"stoppedTask"] = [NSNumber numberWithInt:weakSelf.currentTaskId];
+                                          [weakSelf stopTest];
                                       }else{
                                           res[@"success"] = @NO;
                                           res[@"reason"]  = @"no valid action";
@@ -180,6 +181,13 @@
             [self.delegate performSelector:@selector(appendLog:) withObject:logText];
         });
     }
+}
+
+//do something after memory warning
+-(void)clearMemory{
+    NSDictionary *lastestResult = [self.testResult lastObject];
+    self.testResult = [[NSMutableArray alloc] initWithObjects:lastestResult, nil];
+    
 }
 
 @end

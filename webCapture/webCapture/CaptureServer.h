@@ -24,4 +24,5 @@
 @property (nonatomic,strong) id<captureServerDelegate> delegate;
 -(void)startServer;
 -(void)stopServer;
+-(void)clearMemory;
 @end

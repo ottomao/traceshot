@@ -173,11 +173,11 @@
                                                                       attributes:@{
                                                                                    NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2]}];
         
-        UILabel *tmpLabel = [[UILabel alloc] initWithFrame:CGRectMake(i*260 + 60, 100, 200, 20)];
+        UILabel *tmpLabel = [[UILabel alloc] initWithFrame:CGRectMake(i*260 + 20, 100, 200, 20)];
         [tmpLabel setAttributedText:richTip];
         
         UIImageView *tmpImageView = [[UIImageView alloc] initWithImage:tmpImage];
-        tmpImageView.frame = CGRectMake( i * 260 + 60 , 120 , 200, viewHeight);
+        tmpImageView.frame = CGRectMake( i * 260 + 20 , 120 , 200, viewHeight);
         tmpImageView.layer.borderColor = [UIColor grayColor].CGColor;
         tmpImageView.layer.borderWidth = 2.0f;
         

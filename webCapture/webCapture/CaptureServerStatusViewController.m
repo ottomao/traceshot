@@ -52,6 +52,9 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    NSLog(@"memory warning!");
+    
+    [self.server clearMemory];
     // Dispose of any resources that can be recreated.
 }
 

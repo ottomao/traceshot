@@ -49,20 +49,23 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    NSHTTPURLResponse *httpRes = (NSHTTPURLResponse *)response;
-    NSMutableDictionary *headers = [[httpRes allHeaderFields] mutableCopy];
-    [headers removeObjectForKey:@"Expires"];
-    [headers removeObjectForKey:@"Cache-Control"];
-    [headers removeObjectForKey:@"Age"];
-    [headers removeObjectForKey:@"Last-Modified"];
-    NSHTTPURLResponse *newRes = [[NSHTTPURLResponse alloc] initWithURL:[[connection originalRequest] URL]
-                                                            statusCode:[httpRes statusCode]
-                                                           HTTPVersion:@"HTTP/1.1"
-                                                          headerFields:[headers copy]
-                                 ];
-    
-    [self.client URLProtocol:self didReceiveResponse:[newRes copy] cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-    
+    @autoreleasepool {
+        NSHTTPURLResponse *httpRes = (NSHTTPURLResponse *)response;
+        NSMutableDictionary *headers = [[httpRes allHeaderFields] mutableCopy];
+        [headers removeObjectForKey:@"Expires"];
+        [headers removeObjectForKey:@"Cache-Control"];
+        [headers removeObjectForKey:@"Age"];
+        [headers removeObjectForKey:@"Last-Modified"];
+        NSHTTPURLResponse *newRes = [[NSHTTPURLResponse alloc] initWithURL:[[connection originalRequest] URL]
+                                                                statusCode:[httpRes statusCode]
+                                                               HTTPVersion:@"HTTP/1.1"
+                                                              headerFields:[headers copy]
+                                     ];
+        
+        [self.client URLProtocol:self didReceiveResponse:[newRes copy] cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+    }
+
+
 }
 
 
