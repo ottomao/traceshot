@@ -91,10 +91,16 @@
     }
     
     [self.mainWebView stopLoading];
+    self.mainWebView = nil;
     
     if([self.delegate respondsToSelector:@selector(testTaskEndedWithFinishStatus:)]){
         [self.delegate performSelector:@selector(testTaskEndedWithFinishStatus:) withObject:ifFinished];
     }
+}
+
+- (void)dealloc{
+    //TODO
+    self.mainWebView = nil;
 }
 
 - (void)startLoading{
@@ -127,7 +133,7 @@
 - (UIView *)resultSummaryView{
     NSArray *shots = [self.screenshots copy];
     NSUInteger shotCount = [shots count];
-    NSInteger finalW = shotCount * 260 + 60 ; //60 - 200 - 60 - 200 -60
+    NSInteger finalW = shotCount * 260 ; //20 - 200 - 20 - 200 -20
     
     UIView *imageBoardView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, finalW, 500)];
     imageBoardView.backgroundColor = [UIColor whiteColor];

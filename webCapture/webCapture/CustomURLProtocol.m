@@ -28,7 +28,7 @@
     
     [mutableReq setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
     
-//    NSLog(@"canonical req url : %@",mutableReq.URL);
+    
     return [mutableReq copy];
 }
 

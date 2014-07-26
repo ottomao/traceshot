@@ -86,9 +86,11 @@
     CDZQRScanningViewController *scanningVC = [CDZQRScanningViewController new];
     UINavigationController *scanningNavVC = [[UINavigationController alloc] initWithRootViewController:scanningVC];
     
+    __weak CaptureWelcomeViewController *weakSelf = self;
+    
     // configure the scanning view controller:
     scanningVC.resultBlock = ^(NSString *result) {
-        self.urlInput.text = result;
+        weakSelf.urlInput.text = result;
         [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
     };
     scanningVC.cancelBlock = ^() {
