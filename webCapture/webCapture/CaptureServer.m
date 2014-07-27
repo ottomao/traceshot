@@ -95,7 +95,7 @@
                                           
                                       }else if([actionName isEqualToString:SERVER_ACTION_FORCE_STOP]){
                                           res[@"success"]     = @YES;
-                                          res[@"stoppedTask"] = [NSNumber numberWithInt:weakSelf.currentTaskId];
+                                          res[@"stoppedTaskId"] = [NSNumber numberWithInt:weakSelf.currentTaskId];
                                           [weakSelf stopTest];
                                       }else{
                                           res[@"success"] = @NO;
