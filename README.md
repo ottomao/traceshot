@@ -1,10 +1,3 @@
-Traceshot
-=========
-Author: **Otto Mao**
-
-Contact: **ottomao@gmail.com**
-
-
 ### Intro
 Traceshot is a tool for web developers to evaluate the web page loading performance visually. By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.
 
@@ -52,3 +45,8 @@ When working as a server, Traceshot can run tasks assigned by its RESTful API.
 * Sample: fetch the result of lastest test
 * Req: ```http://SERVER:PORT/?action=fetch```
 * Res: ```{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk...```
+
+### Contact
+* Author: **Otto Mao** ,from China
+* Email: **ottomao@gmail.com**
+
