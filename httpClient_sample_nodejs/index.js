@@ -1,7 +1,7 @@
 var clientUtil = require("./util.js");
 
 /* set server (i.e. the device) url */
-clientUtil.setServerUrl("http://10.68.140.153:8080");
+clientUtil.setServerUrl("http://10.68.140.219:8080");
 
 /*
 	1.shot amazon.com ,shot interval = 0.5s , duration = 6s
@@ -29,11 +29,11 @@ setTimeout(function() {
 	start a task ,and then stop it
 	just to test the stop_task api
 */
-// setTimeout(function(){
+setTimeout(function(){
 
-// 	console.log("===test stop_task api===");
-// 	clientUtil.startNewTest("http://www.amazon.com",0.5,10);	
-// 	clientUtil.stopTask();	
-// 	clientUtil.queryStatus();
+	console.log("===test stop_task api===");
+	clientUtil.startNewTest("http://www.amazon.com",0.5,10);	
+	clientUtil.stopTask();	
+	clientUtil.queryStatus();
 
-// },12 * 1000);
+},12 * 1000);

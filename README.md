@@ -10,17 +10,8 @@ Traceshot is a tool for web developers to evaluate the web page loading performa
 
 Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn't it ?
 
-### Install
-摩天轮企业包：
-
-![](http://gtms03.alicdn.com/tps/i3/TB15sy9FVXXXXX7XXXXOmpcTFXX-305-344.png_300x300.jpg)
-
 ### Screenshots
-Home page
-
-During Test
-
-The summary of loading process give by traceshot
+[![](http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png_760x760.jpg)](http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png)
 
 ### Server Mode
 
@@ -36,28 +27,32 @@ When working as a server, Traceshot can run tasks assigned by its RESTful API.
 ### RESTful API of server mode
 
 #### basic form
-* All the apis are called with this pattern: ```Http://SERVER:PORT/?action=ACTION_NAME&paraA=VALUE_A&paraB=VALUE_B``` 
+* All the apis are called with this pattern: ```http://SERVER:PORT/?action=ACTION_NAME&paraA=VALUE_A&paraB=VALUE_B``` 
 
 #### query status
 * Sample: query whether the test server is busy
-* Req: ```Http://SERVER:PORT/?action=status```
+* Req: ```http://SERVER:PORT/?action=status```
 * Res: ```{"success":true,"isIdle":true}```
 
 
 ##### start a task
 * Sample: start a test task with url *http://sample.com?t=1* , screen shot interval *0.2s* , lasts *20s*
-* Req: ```Http://SERVER:PORT/?action=shot&url=http%3A%2F%2Fsample.com%3Ft%3D1&interval=0.2s&duration=20s```
+* Req: ```http://SERVER:PORT/?action=shot&url=http%3A%2F%2Fsample.com%3Ft%3D1&interval=0.2s&duration=20s```
 * Res-success:```
 {"success":true,"taskId":1}```
 * Res-error:```{"success":false,"reason":"another task is on the fly now"}```
 
 ##### stop a task
 * Sample: stop the current task
-* Req: ```Http://SERVER:PORT/?action=stop```
+* Req: ```http://SERVER:PORT/?action=stop```
 * Res: ```{"success":true,"stoppedTaskId":3}```
 
 ##### fetch result
 * Sample: fetch the result of lastest test
-* Req: ```Http://SERVER:PORT/?action=fetch```
+* Req: ```http://SERVER:PORT/?action=fetch```
 * Res: ```{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk...```
 
+### Install
+摩天轮企业包：
+
+![](http://gtms03.alicdn.com/tps/i3/TB15sy9FVXXXXX7XXXXOmpcTFXX-305-344.png_300x300.jpg)
