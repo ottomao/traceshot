@@ -28,6 +28,7 @@ When working as a server, Traceshot can run tasks assigned by its RESTful API.
 
 #### basic form
 * All the apis are called with this pattern: ```http://SERVER:PORT/?action=ACTION_NAME&paraA=VALUE_A&paraB=VALUE_B``` 
+* A sample client written in nodejs can be found in *httpClient_sample_nodejs*
 
 #### query status
 * Sample: query whether the test server is busy
