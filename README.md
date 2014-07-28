@@ -52,8 +52,3 @@ When working as a server, Traceshot can run tasks assigned by its RESTful API.
 * Sample: fetch the result of lastest test
 * Req: ```http://SERVER:PORT/?action=fetch```
 * Res: ```{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk...```
-
-### Install
-摩天轮企业包：
-
-![](http://gtms03.alicdn.com/tps/i3/TB15sy9FVXXXXX7XXXXOmpcTFXX-305-344.png_300x300.jpg)
