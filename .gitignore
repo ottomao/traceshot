@@ -7,7 +7,7 @@
 .svn
 .wafpickle-*
 .jpg
-httpClient_nodejs_sample/node_modules
-httpClient_nodejs_sample/*.jpg
+./httpClient_nodejs_sample/node_modules
+./httpClient_nodejs_sample/*.jpg
 CVS
 npm-debug.log
