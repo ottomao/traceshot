@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Traceshot by ottomao</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Traceshot</h1>
+        <p>a tool for web developers to evaluate the web page loading performance visually</p>
+
+        <p class="view"><a href="https://github.com/ottomao/traceshot">View the Project on GitHub <small>ottomao/traceshot</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ottomao/traceshot/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ottomao/traceshot/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ottomao/traceshot">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="traceshot" class="anchor" href="#traceshot"><span class="octicon octicon-link"></span></a>Traceshot</h1>
+
+<p>Author: <strong>Otto Mao</strong></p>
+
+<p>Contact: <strong><a href="mailto:ottomao@gmail.com">ottomao@gmail.com</a></strong></p>
+
+<h3>
+<a name="intro" class="anchor" href="#intro"><span class="octicon octicon-link"></span></a>Intro</h3>
+
+<p>Traceshot is a tool for web developers to evaluate the web page loading performance visually. By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.</p>
+
+<p>Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn't it ?</p>
+
+<h3>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h3>
+
+<p><a href="http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png"><img src="http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png_760x760.jpg" alt=""></a></p>
+
+<h3>
+<a name="server-mode" class="anchor" href="#server-mode"><span class="octicon octicon-link"></span></a>Server Mode</h3>
+
+<p>When working as a server, Traceshot can run tasks assigned by its RESTful API.</p>
+
+<p><strong>Features</strong></p>
+
+<ul>
+<li>Traceshot won't do any callback when tasks are finished. You have to fetch the result manually. You may either fetch it by a scheduled task, or just roughly by polling.</li>
+<li>The task result image is transferred as base64, jpg</li>
+<li>Only one task can be dealed at the same time</li>
+<li>There is no concept like task queue in server, you have to implement it on your http client</li>
+</ul><h3>
+<a name="restful-api-of-server-mode" class="anchor" href="#restful-api-of-server-mode"><span class="octicon octicon-link"></span></a>RESTful API of server mode</h3>
+
+<h4>
+<a name="basic-form" class="anchor" href="#basic-form"><span class="octicon octicon-link"></span></a>basic form</h4>
+
+<ul>
+<li>All the apis are called with this pattern: <code>http://SERVER:PORT/?action=ACTION_NAME&amp;paraA=VALUE_A&amp;paraB=VALUE_B</code> </li>
+<li>A sample client written in nodejs can be found in <em>httpClient_sample_nodejs</em>
+</li>
+</ul><h4>
+<a name="query-status" class="anchor" href="#query-status"><span class="octicon octicon-link"></span></a>query status</h4>
+
+<ul>
+<li>Sample: query whether the test server is busy</li>
+<li>Req: <code>http://SERVER:PORT/?action=status</code>
+</li>
+<li>Res: <code>{"success":true,"isIdle":true}</code>
+</li>
+</ul><h5>
+<a name="start-a-task" class="anchor" href="#start-a-task"><span class="octicon octicon-link"></span></a>start a task</h5>
+
+<ul>
+<li>Sample: start a test task with url <em><a href="http://sample.com?t=1">http://sample.com?t=1</a></em> , screen shot interval <em>0.2s</em> , lasts <em>20s</em>
+</li>
+<li>Req: <code>http://SERVER:PORT/?action=shot&amp;url=http%3A%2F%2Fsample.com%3Ft%3D1&amp;interval=0.2s&amp;duration=20s</code>
+</li>
+<li>Res-success:<code>
+{"success":true,"taskId":1}</code>
+</li>
+<li>Res-error:<code>{"success":false,"reason":"another task is on the fly now"}</code>
+</li>
+</ul><h5>
+<a name="stop-a-task" class="anchor" href="#stop-a-task"><span class="octicon octicon-link"></span></a>stop a task</h5>
+
+<ul>
+<li>Sample: stop the current task</li>
+<li>Req: <code>http://SERVER:PORT/?action=stop</code>
+</li>
+<li>Res: <code>{"success":true,"stoppedTaskId":3}</code>
+</li>
+</ul><h5>
+<a name="fetch-result" class="anchor" href="#fetch-result"><span class="octicon octicon-link"></span></a>fetch result</h5>
+
+<ul>
+<li>Sample: fetch the result of lastest test</li>
+<li>Req: <code>http://SERVER:PORT/?action=fetch</code>
+</li>
+<li>Res: <code>{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk...</code>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ottomao">ottomao</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-53250198-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
