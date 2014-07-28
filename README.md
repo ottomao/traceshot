@@ -29,19 +29,19 @@ When working as a server, Traceshot can run tasks assigned by its RESTful API.
 * Res: ```{"success":true,"isIdle":true}```
 
 
-##### start a task
+#### start a task
 * Sample: start a test task with url *http://sample.com?t=1* , screen shot interval *0.2s* , lasts *20s*
 * Req: ```http://SERVER:PORT/?action=shot&url=http%3A%2F%2Fsample.com%3Ft%3D1&interval=0.2s&duration=20s```
 * Res-success:```
 {"success":true,"taskId":1}```
 * Res-error:```{"success":false,"reason":"another task is on the fly now"}```
 
-##### stop a task
+#### stop a task
 * Sample: stop the current task
 * Req: ```http://SERVER:PORT/?action=stop```
 * Res: ```{"success":true,"stoppedTaskId":3}```
 
-##### fetch result
+#### fetch result
 * Sample: fetch the result of lastest test
 * Req: ```http://SERVER:PORT/?action=fetch```
 * Res: ```{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk...```
