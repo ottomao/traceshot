@@ -10,6 +10,11 @@ Traceshot is a tool for web developers to evaluate the web page loading performa
 
 Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn't it ?
 
+### Install
+摩天轮企业包：
+
+![](http://gtms03.alicdn.com/tps/i3/TB1C3a8FVXXXXccXXXXbtsxUVXX-626-716.png_300x300.jpg)
+
 ### Screenshots
 Home page
 
