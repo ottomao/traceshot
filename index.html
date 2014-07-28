@@ -28,24 +28,17 @@
         </ul>
       </header>
       <section>
-        <h1>
-<a name="traceshot" class="anchor" href="#traceshot"><span class="octicon octicon-link"></span></a>Traceshot</h1>
-
-<p>Author: <strong>Otto Mao</strong></p>
-
-<p>Contact: <strong><a href="mailto:ottomao@gmail.com">ottomao@gmail.com</a></strong></p>
-
-<h3>
+        <h3>
 <a name="intro" class="anchor" href="#intro"><span class="octicon octicon-link"></span></a>Intro</h3>
 
-<p>Traceshot is a tool for web developers to evaluate the web page loading performance visually. By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.</p>
+<p><strong>Traceshot</strong> is a tool for web developers to evaluate the web page loading performance visually. By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.</p>
 
 <p>Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn't it ?</p>
 
 <h3>
 <a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h3>
 
-<p><a href="http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png"><img src="http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png_760x760.jpg" alt=""></a></p>
+<p><a href="http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png"><img src="http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png_760x760.jpg"></a></p>
 
 <h3>
 <a name="server-mode" class="anchor" href="#server-mode"><span class="octicon octicon-link"></span></a>Server Mode</h3>
@@ -78,8 +71,8 @@
 </li>
 <li>Res: <code>{"success":true,"isIdle":true}</code>
 </li>
-</ul><h5>
-<a name="start-a-task" class="anchor" href="#start-a-task"><span class="octicon octicon-link"></span></a>start a task</h5>
+</ul><h4>
+<a name="start-a-task" class="anchor" href="#start-a-task"><span class="octicon octicon-link"></span></a>start a task</h4>
 
 <ul>
 <li>Sample: start a test task with url <em><a href="http://sample.com?t=1">http://sample.com?t=1</a></em> , screen shot interval <em>0.2s</em> , lasts <em>20s</em>
@@ -91,8 +84,8 @@
 </li>
 <li>Res-error:<code>{"success":false,"reason":"another task is on the fly now"}</code>
 </li>
-</ul><h5>
-<a name="stop-a-task" class="anchor" href="#stop-a-task"><span class="octicon octicon-link"></span></a>stop a task</h5>
+</ul><h4>
+<a name="stop-a-task" class="anchor" href="#stop-a-task"><span class="octicon octicon-link"></span></a>stop a task</h4>
 
 <ul>
 <li>Sample: stop the current task</li>
@@ -100,14 +93,21 @@
 </li>
 <li>Res: <code>{"success":true,"stoppedTaskId":3}</code>
 </li>
-</ul><h5>
-<a name="fetch-result" class="anchor" href="#fetch-result"><span class="octicon octicon-link"></span></a>fetch result</h5>
+</ul><h4>
+<a name="fetch-result" class="anchor" href="#fetch-result"><span class="octicon octicon-link"></span></a>fetch result</h4>
 
 <ul>
 <li>Sample: fetch the result of lastest test</li>
 <li>Req: <code>http://SERVER:PORT/?action=fetch</code>
 </li>
 <li>Res: <code>{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk...</code>
+</li>
+</ul><h3>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h3>
+
+<ul>
+<li>Author: <strong>Otto Mao</strong> ,from China</li>
+<li>Email: <strong><a href="mailto:ottomao@gmail.com">ottomao@gmail.com</a></strong>
 </li>
 </ul>
       </section>
