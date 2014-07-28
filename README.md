@@ -13,7 +13,7 @@ Besides, Traceshot can be used as a server. In other words, you may establish yo
 ### Install
 摩天轮企业包：
 
-![](http://gtms03.alicdn.com/tps/i3/TB1C3a8FVXXXXccXXXXbtsxUVXX-626-716.png_300x300.jpg)
+![](http://gtms03.alicdn.com/tps/i3/TB15sy9FVXXXXX7XXXXOmpcTFXX-305-344.png_300x300.jpg)
 
 ### Screenshots
 Home page
