@@ -525,7 +525,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
-				INFOPLIST_FILE = "taobao-Info.plist";
+				INFOPLIST_FILE = "webCapture/taobao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "webCapture copy";
 				PROVISIONING_PROFILE = "";
@@ -543,7 +543,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
-				INFOPLIST_FILE = "taobao-Info.plist";
+				INFOPLIST_FILE = "webCapture/taobao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "webCapture copy";
 				PROVISIONING_PROFILE = "";
