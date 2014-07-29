@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gRS-IA-0XI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gRS-IA-0XI">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Capture Server Status View Controller-->
@@ -62,7 +62,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grid" translatesAutoresizingMaskIntoConstraints="NO" id="cOJ-pS-mVV">
                                 <rect key="frame" x="1" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://m.amazon.com/" borderStyle="roundedRect" placeholder="url with http://" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Ow-AU-lCO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.amazon.com/" borderStyle="roundedRect" placeholder="url with http://" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Ow-AU-lCO">
                                 <rect key="frame" x="20" y="118" width="233" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="done"/>
@@ -91,7 +91,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-Ov-9hk">
-                                <rect key="frame" x="90" y="456" width="140" height="35"/>
+                                <rect key="frame" x="90" y="440" width="140" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Start Server">
                                     <color key="titleColor" red="1" green="0.3294117647" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,16 +106,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Server Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-zZ-hQG">
-                                <rect key="frame" x="17" y="413" width="99" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Server Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-zZ-hQG">
+                                <rect key="frame" x="17" y="394" width="99" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCa-lE-kPX">
-                                <rect key="frame" x="125" y="413" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCa-lE-kPX">
+                                <rect key="frame" x="124" y="394" width="22" height="22"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="49W-eE-YVj" kind="push" id="7Fr-Rr-xje"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="shot interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8Z-RT-afr">
                                 <rect key="frame" x="27" y="165" width="94" height="21"/>
@@ -140,8 +143,8 @@
                                     <action selector="updateSlideTip:" destination="r5l-8W-HVz" eventType="valueChanged" id="Awx-xH-uNe"/>
                                 </connections>
                             </slider>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYJ-cw-7Mv">
-                                <rect key="frame" x="0.0" y="361" width="320" height="3"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYJ-cw-7Mv">
+                                <rect key="frame" x="0.0" y="359" width="320" height="3"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVv-EA-0ma">
@@ -158,9 +161,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sCa-lE-kPX" firstAttribute="leading" secondItem="d9w-zZ-hQG" secondAttribute="trailing" constant="9" id="MrQ-ip-nrr"/>
                             <constraint firstAttribute="centerX" secondItem="F7g-HI-2KN" secondAttribute="centerX" id="PUh-zG-RZs"/>
                             <constraint firstItem="8Ow-AU-lCO" firstAttribute="leading" secondItem="6SI-cq-vSD" secondAttribute="leading" constant="20" symbolic="YES" id="Wr5-C5-KYQ"/>
                             <constraint firstItem="09q-XM-7mW" firstAttribute="leading" secondItem="8Ow-AU-lCO" secondAttribute="trailing" constant="8" id="gbN-eu-fel"/>
+                            <constraint firstItem="d9w-zZ-hQG" firstAttribute="top" secondItem="vYJ-cw-7Mv" secondAttribute="bottom" constant="30" id="ha6-Tu-QE7"/>
                             <constraint firstAttribute="trailing" secondItem="09q-XM-7mW" secondAttribute="trailing" constant="20" id="u4V-WX-oKT"/>
                             <constraint firstItem="09q-XM-7mW" firstAttribute="centerY" secondItem="8Ow-AU-lCO" secondAttribute="centerY" constant="-0.5" id="zcR-Pf-unb"/>
                         </constraints>
@@ -233,6 +238,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576" y="99"/>
+        </scene>
+        <!--Capture Server Mode Intro View Controller-->
+        <scene sceneID="nyP-16-FC8">
+            <objects>
+                <viewController id="49W-eE-YVj" customClass="CaptureServerModeIntroViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="04N-z8-m23"/>
+                        <viewControllerLayoutGuide type="bottom" id="myi-X5-jqU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FNk-9P-ffd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryO-Er-c9V">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ryO-Er-c9V" secondAttribute="bottom" id="4fV-iK-sck"/>
+                            <constraint firstItem="ryO-Er-c9V" firstAttribute="top" secondItem="04N-z8-m23" secondAttribute="bottom" id="6DX-J3-HQD"/>
+                            <constraint firstAttribute="trailing" secondItem="ryO-Er-c9V" secondAttribute="trailing" id="aql-41-oJf"/>
+                            <constraint firstItem="ryO-Er-c9V" firstAttribute="leading" secondItem="FNk-9P-ffd" secondAttribute="leading" id="pnI-UW-Cg6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G78-2J-859"/>
+                    <connections>
+                        <outlet property="mainWebView" destination="ryO-Er-c9V" id="W4W-tg-KZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOg-TE-NBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="886"/>
         </scene>
         <!--Capture Result View Controller - Test Result-->
         <scene sceneID="Y9R-VJ-idH">

@@ -88,12 +88,13 @@ NSString * const CDZQRScanningErrorDomain = @"com.cdzombak.qrscanningviewcontrol
 
     self.lastCapturedString = nil;
 
+    __weak CDZQRScanningViewController *weakself = self;
     if (self.cancelBlock && !self.errorBlock) {
         CDZWeakSelf wSelf = self;
         self.errorBlock = ^(NSError *error) {
             CDZStrongSelf sSelf = wSelf;
             if (sSelf.cancelBlock) {
-                [self.avSession stopRunning];
+                [weakself.avSession stopRunning];
                 sSelf.cancelBlock();
             }
         };

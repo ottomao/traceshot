@@ -50,6 +50,7 @@
         self.mainWebView = nil;
         self.mainWebView = [[UIWebView alloc] initWithFrame:self.mainWebViewFrame]; //exclude the status bar & navigation bar
         self.mainWebView.delegate = self;
+        self.mainWebView.dataDetectorTypes = UIDataDetectorTypeNone;
         
         if(self.url){
             [self startLoading];
@@ -100,6 +101,7 @@
 
 - (void)dealloc{
     //TODO
+    [self.mainWebView removeFromSuperview];
     self.mainWebView = nil;
 }
 

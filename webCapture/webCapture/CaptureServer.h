@@ -21,7 +21,7 @@
 
 @interface CaptureServer : NSObject <CaptureScreenshotManagerDelegate>
 @property (nonatomic,strong) GCDWebServer* webServer;
-@property (nonatomic,strong) id<captureServerDelegate> delegate;
+@property (nonatomic,weak) id<captureServerDelegate> delegate;
 -(void)startServer;
 -(void)stopServer;
 -(void)clearMemory;

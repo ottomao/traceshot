@@ -45,19 +45,14 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self stopTesting];
-    self.shotMgr = nil;
     
-    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+//    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)refreshTest:(id)sender {
-    [self startTest];
 }
 
 - (void)startTest{
@@ -74,6 +69,7 @@
 }
 
 - (void)stopTesting{
+    [self.tickTimer invalidate];
     [self.shotMgr stopTesting];
 }
 

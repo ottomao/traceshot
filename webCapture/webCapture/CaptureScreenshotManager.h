@@ -27,7 +27,7 @@
 @property (nonatomic) double shotInterval;
 @property (nonatomic) double testDuration;
 @property (nonatomic,strong,readonly) UIImage *imageSummary;
-@property (strong, nonatomic) id<CaptureScreenshotManagerDelegate> delegate;
+@property (weak, nonatomic) id<CaptureScreenshotManagerDelegate> delegate;
 
 - (CaptureScreenshotManager *)initWithUrl:(NSString *)url
                           captureInterval:(double)interval
