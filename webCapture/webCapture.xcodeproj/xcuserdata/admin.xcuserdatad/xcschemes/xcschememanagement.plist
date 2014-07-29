@@ -3,7 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>webCapture copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>8449EC6D1987CA9100965CA7</key>
@@ -17,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>84B3DCE7196CE37000FE1A06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>84BA85391987D08D0018A2D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

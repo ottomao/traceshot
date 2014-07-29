@@ -10,25 +10,6 @@
 		2E2FB08ABACD404D922A925E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B711E4849D1B422380597BDD /* libPods.a */; };
 		842653DD19879BCC00AAE358 /* CaptureServerModeIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842653DC19879BCC00AAE358 /* CaptureServerModeIntroViewController.m */; };
 		843B272C1973C904004CD663 /* CustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B272B1973C904004CD663 /* CustomURLProtocol.m */; };
-		8449EC701987CA9100965CA7 /* CDZQRScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FA5AD6196F6E9100A26CE7 /* CDZQRScanningViewController.m */; };
-		8449EC711987CA9100965CA7 /* ViewToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C54E951971271B00A8C6E4 /* ViewToImage.m */; };
-		8449EC721987CA9100965CA7 /* CaptureWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */; };
-		8449EC731987CA9100965CA7 /* CaptureServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6304B1976D064000E8DDD /* CaptureServer.m */; };
-		8449EC741987CA9100965CA7 /* CaptureServerModeIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842653DC19879BCC00AAE358 /* CaptureServerModeIntroViewController.m */; };
-		8449EC751987CA9100965CA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DCD6196CE37000FE1A06 /* main.m */; };
-		8449EC761987CA9100965CA7 /* CaptureAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DCDA196CE37000FE1A06 /* CaptureAppDelegate.m */; };
-		8449EC771987CA9100965CA7 /* CaptureResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DD00196CE86100FE1A06 /* CaptureResultViewController.m */; };
-		8449EC781987CA9100965CA7 /* CaptureScreenshotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DD03196CEE7E00FE1A06 /* CaptureScreenshotManager.m */; };
-		8449EC791987CA9100965CA7 /* CustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B272B1973C904004CD663 /* CustomURLProtocol.m */; };
-		8449EC7A1987CA9100965CA7 /* CaptureServerStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E630481976C551000E8DDD /* CaptureServerStatusViewController.m */; };
-		8449EC7B1987CA9100965CA7 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DCE0196CE37000FE1A06 /* CaptureViewController.m */; };
-		8449EC7D1987CA9100965CA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCC196CE37000FE1A06 /* CoreGraphics.framework */; };
-		8449EC7E1987CA9100965CA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCE196CE37000FE1A06 /* UIKit.framework */; };
-		8449EC7F1987CA9100965CA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCA196CE37000FE1A06 /* Foundation.framework */; };
-		8449EC801987CA9100965CA7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B711E4849D1B422380597BDD /* libPods.a */; };
-		8449EC821987CA9100965CA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3DCE2196CE37000FE1A06 /* Images.xcassets */; };
-		8449EC831987CA9100965CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84B3DCD3196CE37000FE1A06 /* InfoPlist.strings */; };
-		8449EC841987CA9100965CA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3DCDC196CE37000FE1A06 /* Main.storyboard */; };
 		8474F4F0196E4163005A4F4D /* CaptureWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */; };
 		84B3DCCB196CE37000FE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCA196CE37000FE1A06 /* Foundation.framework */; };
 		84B3DCCD196CE37000FE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCC196CE37000FE1A06 /* CoreGraphics.framework */; };
@@ -46,6 +27,25 @@
 		84B3DCF6196CE37000FE1A06 /* webCaptureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DCF5196CE37000FE1A06 /* webCaptureTests.m */; };
 		84B3DD01196CE86100FE1A06 /* CaptureResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DD00196CE86100FE1A06 /* CaptureResultViewController.m */; };
 		84B3DD04196CEE7E00FE1A06 /* CaptureScreenshotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DD03196CEE7E00FE1A06 /* CaptureScreenshotManager.m */; };
+		84BA853C1987D08D0018A2D7 /* CDZQRScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FA5AD6196F6E9100A26CE7 /* CDZQRScanningViewController.m */; };
+		84BA853D1987D08D0018A2D7 /* ViewToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C54E951971271B00A8C6E4 /* ViewToImage.m */; };
+		84BA853E1987D08D0018A2D7 /* CaptureWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */; };
+		84BA853F1987D08D0018A2D7 /* CaptureServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6304B1976D064000E8DDD /* CaptureServer.m */; };
+		84BA85401987D08D0018A2D7 /* CaptureServerModeIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842653DC19879BCC00AAE358 /* CaptureServerModeIntroViewController.m */; };
+		84BA85411987D08D0018A2D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DCD6196CE37000FE1A06 /* main.m */; };
+		84BA85421987D08D0018A2D7 /* CaptureAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DCDA196CE37000FE1A06 /* CaptureAppDelegate.m */; };
+		84BA85431987D08D0018A2D7 /* CaptureResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DD00196CE86100FE1A06 /* CaptureResultViewController.m */; };
+		84BA85441987D08D0018A2D7 /* CaptureScreenshotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DD03196CEE7E00FE1A06 /* CaptureScreenshotManager.m */; };
+		84BA85451987D08D0018A2D7 /* CustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B272B1973C904004CD663 /* CustomURLProtocol.m */; };
+		84BA85461987D08D0018A2D7 /* CaptureServerStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E630481976C551000E8DDD /* CaptureServerStatusViewController.m */; };
+		84BA85471987D08D0018A2D7 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DCE0196CE37000FE1A06 /* CaptureViewController.m */; };
+		84BA85491987D08D0018A2D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCC196CE37000FE1A06 /* CoreGraphics.framework */; };
+		84BA854A1987D08D0018A2D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCE196CE37000FE1A06 /* UIKit.framework */; };
+		84BA854B1987D08D0018A2D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3DCCA196CE37000FE1A06 /* Foundation.framework */; };
+		84BA854C1987D08D0018A2D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B711E4849D1B422380597BDD /* libPods.a */; };
+		84BA854E1987D08D0018A2D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3DCE2196CE37000FE1A06 /* Images.xcassets */; };
+		84BA854F1987D08D0018A2D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84B3DCD3196CE37000FE1A06 /* InfoPlist.strings */; };
+		84BA85501987D08D0018A2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3DCDC196CE37000FE1A06 /* Main.storyboard */; };
 		84C54E961971271B00A8C6E4 /* ViewToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C54E951971271B00A8C6E4 /* ViewToImage.m */; };
 		84E630491976C551000E8DDD /* CaptureServerStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E630481976C551000E8DDD /* CaptureServerStatusViewController.m */; };
 		84E6304C1976D064000E8DDD /* CaptureServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6304B1976D064000E8DDD /* CaptureServer.m */; };
@@ -67,8 +67,6 @@
 		842653DC19879BCC00AAE358 /* CaptureServerModeIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureServerModeIntroViewController.m; sourceTree = "<group>"; };
 		843B272A1973C904004CD663 /* CustomURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomURLProtocol.h; sourceTree = "<group>"; };
 		843B272B1973C904004CD663 /* CustomURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomURLProtocol.m; sourceTree = "<group>"; };
-		8449EC891987CA9100965CA7 /* webCapture copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webCapture copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8449EC8A1987CA9100965CA7 /* webCapture copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "webCapture copy-Info.plist"; path = "/Users/admin/workspace/iOS/traceshot/webCapture/webCapture copy-Info.plist"; sourceTree = "<absolute>"; };
 		8474F4EE196E4163005A4F4D /* CaptureWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureWelcomeViewController.h; sourceTree = "<group>"; };
 		8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureWelcomeViewController.m; sourceTree = "<group>"; };
 		84B3DCC7196CE37000FE1A06 /* Traceshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traceshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +92,8 @@
 		84B3DD00196CE86100FE1A06 /* CaptureResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureResultViewController.m; sourceTree = "<group>"; };
 		84B3DD02196CEE7E00FE1A06 /* CaptureScreenshotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureScreenshotManager.h; sourceTree = "<group>"; };
 		84B3DD03196CEE7E00FE1A06 /* CaptureScreenshotManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureScreenshotManager.m; sourceTree = "<group>"; };
+		84BA85551987D08D0018A2D7 /* webCapture copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webCapture copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BA85561987D08D0018A2D7 /* webCapture copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "webCapture copy-Info.plist"; path = "/Users/admin/workspace/iOS/traceshot/webCapture/webCapture copy-Info.plist"; sourceTree = "<absolute>"; };
 		84C54E941971271B00A8C6E4 /* ViewToImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewToImage.h; sourceTree = "<group>"; };
 		84C54E951971271B00A8C6E4 /* ViewToImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewToImage.m; sourceTree = "<group>"; };
 		84E630471976C551000E8DDD /* CaptureServerStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureServerStatusViewController.h; sourceTree = "<group>"; };
@@ -107,17 +107,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8449EC7C1987CA9100965CA7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8449EC7D1987CA9100965CA7 /* CoreGraphics.framework in Frameworks */,
-				8449EC7E1987CA9100965CA7 /* UIKit.framework in Frameworks */,
-				8449EC7F1987CA9100965CA7 /* Foundation.framework in Frameworks */,
-				8449EC801987CA9100965CA7 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84B3DCC4196CE37000FE1A06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +128,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84BA85481987D08D0018A2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BA85491987D08D0018A2D7 /* CoreGraphics.framework in Frameworks */,
+				84BA854A1987D08D0018A2D7 /* UIKit.framework in Frameworks */,
+				84BA854B1987D08D0018A2D7 /* Foundation.framework in Frameworks */,
+				84BA854C1987D08D0018A2D7 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -150,7 +150,7 @@
 				84B3DCC9196CE37000FE1A06 /* Frameworks */,
 				84B3DCC8196CE37000FE1A06 /* Products */,
 				B9192C216C404EE28FB6FE2C /* Pods.xcconfig */,
-				8449EC8A1987CA9100965CA7 /* webCapture copy-Info.plist */,
+				84BA85561987D08D0018A2D7 /* webCapture copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,7 +159,7 @@
 			children = (
 				84B3DCC7196CE37000FE1A06 /* Traceshot.app */,
 				84B3DCE8196CE37000FE1A06 /* webCaptureTests.xctest */,
-				8449EC891987CA9100965CA7 /* webCapture copy.app */,
+				84BA85551987D08D0018A2D7 /* webCapture copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,25 +240,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8449EC6D1987CA9100965CA7 /* taobao */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8449EC861987CA9100965CA7 /* Build configuration list for PBXNativeTarget "taobao" */;
-			buildPhases = (
-				8449EC6E1987CA9100965CA7 /* Check Pods Manifest.lock */,
-				8449EC6F1987CA9100965CA7 /* Sources */,
-				8449EC7C1987CA9100965CA7 /* Frameworks */,
-				8449EC811987CA9100965CA7 /* Resources */,
-				8449EC851987CA9100965CA7 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = taobao;
-			productName = webCapture;
-			productReference = 8449EC891987CA9100965CA7 /* webCapture copy.app */;
-			productType = "com.apple.product-type.application";
-		};
 		84B3DCC6196CE37000FE1A06 /* webCapture */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84B3DCF9196CE37000FE1A06 /* Build configuration list for PBXNativeTarget "webCapture" */;
@@ -296,6 +277,25 @@
 			productReference = 84B3DCE8196CE37000FE1A06 /* webCaptureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		84BA85391987D08D0018A2D7 /* webCapture copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84BA85521987D08D0018A2D7 /* Build configuration list for PBXNativeTarget "webCapture copy" */;
+			buildPhases = (
+				84BA853A1987D08D0018A2D7 /* Check Pods Manifest.lock */,
+				84BA853B1987D08D0018A2D7 /* Sources */,
+				84BA85481987D08D0018A2D7 /* Frameworks */,
+				84BA854D1987D08D0018A2D7 /* Resources */,
+				84BA85511987D08D0018A2D7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "webCapture copy";
+			productName = webCapture;
+			productReference = 84BA85551987D08D0018A2D7 /* webCapture copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -329,22 +329,12 @@
 			targets = (
 				84B3DCC6196CE37000FE1A06 /* webCapture */,
 				84B3DCE7196CE37000FE1A06 /* webCaptureTests */,
-				8449EC6D1987CA9100965CA7 /* taobao */,
+				84BA85391987D08D0018A2D7 /* webCapture copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8449EC811987CA9100965CA7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8449EC821987CA9100965CA7 /* Images.xcassets in Resources */,
-				8449EC831987CA9100965CA7 /* InfoPlist.strings in Resources */,
-				8449EC841987CA9100965CA7 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84B3DCC5196CE37000FE1A06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +350,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3DCF4196CE37000FE1A06 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BA854D1987D08D0018A2D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BA854E1987D08D0018A2D7 /* Images.xcassets in Resources */,
+				84BA854F1987D08D0018A2D7 /* InfoPlist.strings in Resources */,
+				84BA85501987D08D0018A2D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +396,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8449EC6E1987CA9100965CA7 /* Check Pods Manifest.lock */ = {
+		84BA853A1987D08D0018A2D7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,7 +411,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8449EC851987CA9100965CA7 /* Copy Pods Resources */ = {
+		84BA85511987D08D0018A2D7 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,25 +429,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8449EC6F1987CA9100965CA7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8449EC701987CA9100965CA7 /* CDZQRScanningViewController.m in Sources */,
-				8449EC711987CA9100965CA7 /* ViewToImage.m in Sources */,
-				8449EC721987CA9100965CA7 /* CaptureWelcomeViewController.m in Sources */,
-				8449EC731987CA9100965CA7 /* CaptureServer.m in Sources */,
-				8449EC741987CA9100965CA7 /* CaptureServerModeIntroViewController.m in Sources */,
-				8449EC751987CA9100965CA7 /* main.m in Sources */,
-				8449EC761987CA9100965CA7 /* CaptureAppDelegate.m in Sources */,
-				8449EC771987CA9100965CA7 /* CaptureResultViewController.m in Sources */,
-				8449EC781987CA9100965CA7 /* CaptureScreenshotManager.m in Sources */,
-				8449EC791987CA9100965CA7 /* CustomURLProtocol.m in Sources */,
-				8449EC7A1987CA9100965CA7 /* CaptureServerStatusViewController.m in Sources */,
-				8449EC7B1987CA9100965CA7 /* CaptureViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84B3DCC3196CE37000FE1A06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +453,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3DCF6196CE37000FE1A06 /* webCaptureTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BA853B1987D08D0018A2D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BA853C1987D08D0018A2D7 /* CDZQRScanningViewController.m in Sources */,
+				84BA853D1987D08D0018A2D7 /* ViewToImage.m in Sources */,
+				84BA853E1987D08D0018A2D7 /* CaptureWelcomeViewController.m in Sources */,
+				84BA853F1987D08D0018A2D7 /* CaptureServer.m in Sources */,
+				84BA85401987D08D0018A2D7 /* CaptureServerModeIntroViewController.m in Sources */,
+				84BA85411987D08D0018A2D7 /* main.m in Sources */,
+				84BA85421987D08D0018A2D7 /* CaptureAppDelegate.m in Sources */,
+				84BA85431987D08D0018A2D7 /* CaptureResultViewController.m in Sources */,
+				84BA85441987D08D0018A2D7 /* CaptureScreenshotManager.m in Sources */,
+				84BA85451987D08D0018A2D7 /* CustomURLProtocol.m in Sources */,
+				84BA85461987D08D0018A2D7 /* CaptureServerStatusViewController.m in Sources */,
+				84BA85471987D08D0018A2D7 /* CaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,42 +513,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8449EC871987CA9100965CA7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9192C216C404EE28FB6FE2C /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
-				INFOPLIST_FILE = "webCapture copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "webCapture copy";
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		8449EC881987CA9100965CA7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9192C216C404EE28FB6FE2C /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
-				INFOPLIST_FILE = "webCapture copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "webCapture copy";
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		84B3DCF7196CE37000FE1A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -698,18 +662,45 @@
 			};
 			name = Release;
 		};
+		84BA85531987D08D0018A2D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9192C216C404EE28FB6FE2C /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
+				INFOPLIST_FILE = "webCapture copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "webCapture copy";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84BA85541987D08D0018A2D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9192C216C404EE28FB6FE2C /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
+				INFOPLIST_FILE = "webCapture copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "webCapture copy";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8449EC861987CA9100965CA7 /* Build configuration list for PBXNativeTarget "taobao" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8449EC871987CA9100965CA7 /* Debug */,
-				8449EC881987CA9100965CA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		84B3DCC2196CE37000FE1A06 /* Build configuration list for PBXProject "webCapture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -733,6 +724,15 @@
 			buildConfigurations = (
 				84B3DCFD196CE37000FE1A06 /* Debug */,
 				84B3DCFE196CE37000FE1A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84BA85521987D08D0018A2D7 /* Build configuration list for PBXNativeTarget "webCapture copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BA85531987D08D0018A2D7 /* Debug */,
+				84BA85541987D08D0018A2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
