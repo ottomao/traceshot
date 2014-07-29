@@ -1,5 +1,7 @@
 ### Intro
-Traceshot is a tool for web developers to evaluate the web page loading performance visually. By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.
+Traceshot is a tool for web developers to evaluate the web page loading performance visually. 
+
+By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.
 
 Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn't it ?
 

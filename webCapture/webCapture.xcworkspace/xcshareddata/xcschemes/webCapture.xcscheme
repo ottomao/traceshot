@@ -91,6 +91,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Traceshot"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
