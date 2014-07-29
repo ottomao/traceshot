@@ -71,7 +71,7 @@
 		8474F4EE196E4163005A4F4D /* CaptureWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureWelcomeViewController.h; sourceTree = "<group>"; };
 		8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureWelcomeViewController.m; sourceTree = "<group>"; };
 		8479AE731987D36000C8A1E6 /* webCapture copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webCapture copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8479AE751987D3E700C8A1E6 /* taobao-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "taobao-Info.plist"; sourceTree = "<group>"; };
+		8479AE751987D3E700C8A1E6 /* taobao-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "taobao-Info.plist"; path = "webCapture/taobao-Info.plist"; sourceTree = "<group>"; };
 		84B3DCC7196CE37000FE1A06 /* Traceshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traceshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3DCCA196CE37000FE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84B3DCCC196CE37000FE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +150,7 @@
 				84B3DCEF196CE37000FE1A06 /* webCaptureTests */,
 				84B3DCC9196CE37000FE1A06 /* Frameworks */,
 				84B3DCC8196CE37000FE1A06 /* Products */,
+				8479AE751987D3E700C8A1E6 /* taobao-Info.plist */,
 				B9192C216C404EE28FB6FE2C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -211,7 +212,6 @@
 		84B3DCD1196CE37000FE1A06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8479AE751987D3E700C8A1E6 /* taobao-Info.plist */,
 				84B3DCD2196CE37000FE1A06 /* webCapture-Info.plist */,
 				84B3DCD3196CE37000FE1A06 /* InfoPlist.strings */,
 				84B3DCD6196CE37000FE1A06 /* main.m */,
