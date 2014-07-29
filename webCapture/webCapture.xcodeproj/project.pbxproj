@@ -70,7 +70,7 @@
 		843B272B1973C904004CD663 /* CustomURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomURLProtocol.m; sourceTree = "<group>"; };
 		8474F4EE196E4163005A4F4D /* CaptureWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureWelcomeViewController.h; sourceTree = "<group>"; };
 		8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureWelcomeViewController.m; sourceTree = "<group>"; };
-		8479AE731987D36000C8A1E6 /* webCapture copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webCapture copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8479AE731987D36000C8A1E6 /* Traceshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traceshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8479AE751987D3E700C8A1E6 /* taobao-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "taobao-Info.plist"; path = "webCapture/taobao-Info.plist"; sourceTree = "<group>"; };
 		84B3DCC7196CE37000FE1A06 /* Traceshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traceshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3DCCA196CE37000FE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,7 +160,7 @@
 			children = (
 				84B3DCC7196CE37000FE1A06 /* Traceshot.app */,
 				84B3DCE8196CE37000FE1A06 /* webCaptureTests.xctest */,
-				8479AE731987D36000C8A1E6 /* webCapture copy.app */,
+				8479AE731987D36000C8A1E6 /* Traceshot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 			);
 			name = taobao;
 			productName = webCapture;
-			productReference = 8479AE731987D36000C8A1E6 /* webCapture copy.app */;
+			productReference = 8479AE731987D36000C8A1E6 /* Traceshot.app */;
 			productType = "com.apple.product-type.application";
 		};
 		84B3DCC6196CE37000FE1A06 /* webCapture */ = {
@@ -527,7 +527,7 @@
 				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
 				INFOPLIST_FILE = "webCapture/taobao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "webCapture copy";
+				PRODUCT_NAME = Traceshot;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -545,7 +545,7 @@
 				GCC_PREFIX_HEADER = "webCapture/webCapture-Prefix.pch";
 				INFOPLIST_FILE = "webCapture/taobao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "webCapture copy";
+				PRODUCT_NAME = Traceshot;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
