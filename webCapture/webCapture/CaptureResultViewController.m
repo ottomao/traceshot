@@ -11,6 +11,7 @@
 
 @interface CaptureResultViewController ()
 @property (nonatomic,strong) UIScrollView *imageScrollView;
+@property (nonatomic,strong) UIView *imageContentView;
 @end
 
 @implementation CaptureResultViewController
@@ -37,11 +38,11 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor whiteColor];
-    UIView *resultSummaryView = [self.shotMgr resultSummaryView];
-    resultSummaryView.frame = CGRectMake(0, 0 , resultSummaryView.frame.size.width, resultSummaryView.frame.size.height);
+    self.imageContentView = [self.shotMgr resultSummaryView];
+    self.imageContentView.frame = CGRectMake(0, 0 , self.imageContentView.frame.size.width, self.imageContentView.frame.size.height);
     
-    [self.imageScrollView addSubview:resultSummaryView];
-    [self.imageScrollView setContentSize:CGSizeMake(resultSummaryView.frame.size.width, resultSummaryView.frame.size.height)];
+    [self.imageScrollView addSubview:self.imageContentView];
+    [self.imageScrollView setContentSize:self.imageContentView.frame.size];//  CGSizeMake(resultSummaryView.frame.size.width, resultSummaryView.frame.size.height)];
     [self.view addSubview:self.imageScrollView];
 }
 
@@ -56,8 +57,11 @@
 }
 
 - (IBAction)saveResultImage:(UIBarButtonItem *)sender {
-    UIImage *imageResult = self.shotMgr.imageSummary;
-    UIImageWriteToSavedPhotosAlbum(imageResult, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIImage *imageResult = [ViewToImage captureScreen:self.imageContentView];
+        UIImageWriteToSavedPhotosAlbum(imageResult, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    });
+
 }
 
 - (void)               image: (UIImage *) image
