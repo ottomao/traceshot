@@ -104,7 +104,10 @@
 - (void)testTaskEndedWithFinishStatus:(NSNumber *)ifFinished{
     BOOL testFinishedStatus = [ifFinished boolValue];
     if(testFinishedStatus && self.view.window){
-        [self performSegueWithIdentifier:@"show result" sender:self];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self performSegueWithIdentifier:@"show result" sender:self];
+        });
+        
     }else{
         
     }

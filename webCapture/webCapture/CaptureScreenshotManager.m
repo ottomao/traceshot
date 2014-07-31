@@ -85,18 +85,22 @@
 }
 
 - (void)stopTestingWithFinishStatus:(NSNumber *)ifFinished{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //reset timer
+        if([self.captureTimer isValid]){
+            [self.captureTimer invalidate];
+        }
+        
+        [self.mainWebView stopLoading];
+        self.mainWebView = nil;
+        
+        if([self.delegate respondsToSelector:@selector(testTaskEndedWithFinishStatus:)]){
+            [self.delegate performSelector:@selector(testTaskEndedWithFinishStatus:) withObject:ifFinished];
+        }
+    });
 
-    //reset timer
-    if([self.captureTimer isValid]){
-        [self.captureTimer invalidate];
-    }
-    
-    [self.mainWebView stopLoading];
-    self.mainWebView = nil;
-    
-    if([self.delegate respondsToSelector:@selector(testTaskEndedWithFinishStatus:)]){
-        [self.delegate performSelector:@selector(testTaskEndedWithFinishStatus:) withObject:ifFinished];
-    }
+
 }
 
 - (void)dealloc{
@@ -133,6 +137,7 @@
 }
 
 - (UIView *)resultSummaryView{
+    
     NSArray *shots = [self.screenshots copy];
     NSUInteger shotCount = [shots count];
     NSInteger finalW = shotCount * 260 ; //20 - 200 - 20 - 200 -20
@@ -141,7 +146,7 @@
     imageBoardView.backgroundColor = [UIColor whiteColor];
     
     //get the height of a screenshot
-    NSInteger viewHeight = 200 * (self.mainWebView.frame.size.height / self.mainWebView.frame.size.width);
+    NSInteger viewHeight = 200 * (self.mainWebViewFrame.size.height / self.mainWebViewFrame.size.width);
     
     //print test info
     NSDictionary *fontAttribute = @{NSFontAttributeName: [UIFont fontWithDescriptor:[UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleBody] size:12.0]};
@@ -171,6 +176,7 @@
         [infoLabel setAttributedText:richTip];
         [imageBoardView addSubview:infoLabel];
     }
+
     
     //print screen shots and label
     for(NSUInteger i = 0 ; i < shotCount ; i++){
@@ -185,13 +191,15 @@
         [tmpLabel setAttributedText:richTip];
         
         UIImageView *tmpImageView = [[UIImageView alloc] initWithImage:tmpImage];
-        tmpImageView.frame = CGRectMake( i * 260 + 20 , 120 , 200, viewHeight);
+        tmpImageView.frame = CGRectMake( i * 260 + 20 , 120 , 200, viewHeight); //TODO : invalid viewheight
         tmpImageView.layer.borderColor = [UIColor grayColor].CGColor;
         tmpImageView.layer.borderWidth = 2.0f;
         
         [imageBoardView addSubview:tmpImageView];
         [imageBoardView addSubview:tmpLabel];
     }
+
+
     
     return imageBoardView;
 }

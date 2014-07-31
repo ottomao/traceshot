@@ -1,14 +1,14 @@
 var clientUtil = require("./util.js");
 
 /* set server (i.e. the device) url */
-clientUtil.setServerUrl("http://10.68.140.219:8080");
+clientUtil.setServerUrl("http://10.68.141.251:8080");
 
 /*
 	1.shot amazon.com ,shot interval = 0.5s , duration = 6s
 	2.query whether the device is busy
 */
 console.log("===start a new task===");
-clientUtil.startNewTest("http://vip.tmall.com",0.5,6);
+clientUtil.startNewTest("http://ju.taobao.com",0.2,3);
 clientUtil.queryStatus();
 
 
@@ -22,7 +22,7 @@ setTimeout(function() {
 	clientUtil.fetchLastestResult();
 	clientUtil.queryStatus();
 
-},8 * 1000); 
+},5 * 1000); 
 
 
 /* 
@@ -36,4 +36,4 @@ setTimeout(function(){
 	clientUtil.stopTask();	
 	clientUtil.queryStatus();
 
-},12 * 1000);
+},7 * 1000);

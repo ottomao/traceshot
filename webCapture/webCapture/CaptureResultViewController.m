@@ -35,8 +35,9 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
 
+    [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.imageContentView = [self.shotMgr resultSummaryView];
     self.imageContentView.frame = CGRectMake(0, 0 , self.imageContentView.frame.size.width, self.imageContentView.frame.size.height);
@@ -44,6 +45,8 @@
     [self.imageScrollView addSubview:self.imageContentView];
     [self.imageScrollView setContentSize:self.imageContentView.frame.size];//  CGSizeMake(resultSummaryView.frame.size.width, resultSummaryView.frame.size.height)];
     [self.view addSubview:self.imageScrollView];
+    
+
 }
 
 - (void)didReceiveMemoryWarning
