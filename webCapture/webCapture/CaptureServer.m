@@ -98,8 +98,12 @@
                                           res[@"stoppedTaskId"] = [NSNumber numberWithInt:weakSelf.currentTaskId];
                                           [weakSelf stopTest];
                                       }else{
-                                          res[@"success"] = @NO;
-                                          res[@"reason"]  = @"no valid action";
+                                          NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+                                          NSString *indexHTML = [[NSString alloc]initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+                                          
+                                          return [GCDWebServerDataResponse responseWithHTML:indexHTML];
+                                          // res[@"success"] = @NO;
+                                          // res[@"reason"]  = @"no valid action";
                                       }
                                       
                                       return [GCDWebServerDataResponse responseWithJSONObject:[res copy]];

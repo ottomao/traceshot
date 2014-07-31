@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>Traceshot</title>
+</head>
+<body>
+
+    <h1>Traceshot</h1>
+    <h3>Intro & Doc : <a href="http://www.traceshot.com" target="_blank">http://www.traceshot.com</a></h3>
+    <hr>
+    <!-- style:http://www.sanwebe.com/2013/10/css-html-form-styles -->
+
+    <div class="left">
+        <div class="newTask section sectionA">
+            <div class="basic-grey">
+                <h1>new task
+                    <span>start a new task</span>
+                </h1>
+
+                <label>
+                    <span>Test Url:</span>
+                    <input class="J_testUrl" name="url" type="text" value="" required placeholder="url with http://" />
+                </label>
+
+                <label>
+                    <span>Shot interval:</span>
+                    <input class="J_shotInterval" name="interval" type="text" value="0.3" required placeholder="shot interval in second" />
+                </label>
+
+                <label>
+                    <span>Duration:</span>
+                    <input class="J_duration" name="duration" type="text" value="6" required placeholder="duration in second" />
+                </label>
+
+                <!-- <input type="submit" value="Submit"> -->
+
+                 <label>
+                    <span>&nbsp;</span> 
+                    <input type="button" class="button J_startBtn" value="Submit" /> 
+                </label>    
+            </div>
+        </div>
+
+        <div class="status section sectionB">
+            <div class="basic-grey">
+                <h1>Device Status </h1>
+
+                <h4>device idle : <span class="J_idelIndicator">-</span></h4>
+
+                <label>
+                    <span>&nbsp;</span> 
+                    <input type="button" class="button J_queryBtn" value="Update" /> 
+                </label>    
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="result section sectionC">
+            <div class="basic-grey J_a">
+                <h1>Latest Result&nbsp;&nbsp;<input type="button" class="button J_fetchBtn" value="Fetch" /> </h1>
+
+                <img class="J_resultImg" src="" />
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+
+    <style type="text/css">
+        h1,h2,h3{
+            margin: 10px;
+        }
+
+        .left, .right{
+            float: left;
+        }
+
+        .section{
+            /*border: 1px solid #CCC;*/
+            min-width: 160px;
+            min-height: 280px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .sectionA,.sectionB{
+            width: 400px;
+        }
+
+        .sectionC{
+            width: 700px;
+        }
+
+        .resultImg{
+            max-width: 600px;
+            cursor: pointer;
+        }
+        /* Basic Grey */
+        /*style:http://www.sanwebe.com/2013/10/css-html-form-styles*/
+        .basic-grey {
+            margin-left:auto;
+            margin-right:auto;
+            max-width: 700px;
+            background: #F7F7F7;
+            padding: 25px 15px 25px 10px;
+            font: 12px Georgia, "Times New Roman", Times, serif;
+            color: #888;
+            text-shadow: 1px 1px 1px #FFF;
+            border:1px solid #E4E4E4;
+        }
+        .basic-grey h1 {
+            font-size: 25px;
+            padding: 0px 0px 10px 40px;
+            display: block;
+            border-bottom:1px solid #E4E4E4;
+            margin: -10px -15px 30px -10px;;
+            color: #888;
+        }
+        .basic-grey h1>span {
+            display: block;
+            font-size: 11px;
+        }
+        .basic-grey label {
+            display: block;
+            margin: 0px;
+        }
+        .basic-grey label>span {
+            float: left;
+            width: 20%;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+            color: #888;
+        }
+        .basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
+            border: 1px solid #DADADA;
+            color: #888;
+            height: 30px;
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            outline: 0 none;
+            padding: 3px 3px 3px 5px;
+            width: 70%;
+            font-size: 12px;
+            line-height:15px;
+            box-shadow: inset 0px 1px 4px #ECECEC;
+            -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+            -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+        }
+        .basic-grey textarea{
+            padding: 5px 3px 3px 5px;
+        }
+        .basic-grey select {
+            background: #FFF url('down-arrow.png') no-repeat right;
+            background: #FFF url('down-arrow.png') no-repeat right);
+            appearance:none;
+            -webkit-appearance:none; 
+            -moz-appearance: none;
+            text-indent: 0.01px;
+            text-overflow: '';
+            width: 70%;
+            height: 35px;
+            line-height: 25px;
+        }
+        .basic-grey textarea{
+            height:100px;
+        }
+        .basic-grey .button {
+            background: #E27575;
+            border: none;
+            padding: 10px 25px 10px 25px;
+            color: #FFF;
+            box-shadow: 1px 1px 5px #B6B6B6;
+            border-radius: 3px;
+            text-shadow: 1px 1px 1px #9E3F3F;
+            cursor: pointer;
+        }
+        .basic-grey .button:hover {
+            background: #CF7A7A;
+        }
+    </style>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        //start test
+        $(".J_startBtn").click(function(){
+            var testUrl      = encodeURIComponent($(".J_testUrl").val()),
+                interval = $(".J_shotInterval").val(),
+                duration = $(".J_duration").val();
+
+            if(!testUrl || !interval || !duration) {
+                alert("all fields are required");
+                return;
+            }
+
+            var url = '/?action=shot&url=__testUrl&interval=__interval&duration=__duration'.replace(/__testUrl/,testUrl).replace(/__interval/,interval).replace(/__duration/,duration);
+            $.getJSON(url,function(data){
+                if(!data.success){
+                    alert(data.reason);
+                    return;
+                }
+
+                alert("success , task id : __taskId\nplease fetch result after __duration seconds".replace(/__taskId/,data.taskId).replace(/__duration/,duration));
+            });
+        });
+
+        //query status
+        $(".J_idelIndicator").html("-");
+        $(".J_queryBtn").click(function(){
+            $.getJSON("/?action=status",function(data){ //TODO : mod url ?action=status
+                if(!data.success){
+                    alert(data.reason);
+                    return;
+                }
+
+                var tipText = data.isIdle ? "true" : "false";
+                $(".J_idelIndicator").html(tipText);
+
+            });
+        });
+
+        //fetchResult
+        var imgEl = $(".J_resultImg");
+        function updateResult(base64){
+            $.getJSON("/?action=fetch",function(data){ //TODO : mod url ?action=status
+                if(!data.success){
+                    alert(data.reason);
+                    return;
+                }
+
+                imgEl.attr("src",data.imgBase64);
+            });
+        }
+        $(".J_fetchBtn").click(updateResult);
+        imgEl.click(function(){
+            window.open(imgEl.attr("src"));
+        });
+
+
+    </script>
+</body>
+</html>

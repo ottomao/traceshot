@@ -131,13 +131,13 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.10000000000000001" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="cir-iM-dbV">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.10000000000000001" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="cir-iM-dbV">
                                 <rect key="frame" x="127" y="161" width="128" height="31"/>
                                 <connections>
                                     <action selector="updateSlideTip:" destination="r5l-8W-HVz" eventType="valueChanged" id="Uss-8r-rGL"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="1" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Fvc-bH-MyM">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Fvc-bH-MyM">
                                 <rect key="frame" x="128" y="204" width="127" height="31"/>
                                 <connections>
                                     <action selector="updateSlideTip:" destination="r5l-8W-HVz" eventType="valueChanged" id="Awx-xH-uNe"/>

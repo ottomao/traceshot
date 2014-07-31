@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E2FB08ABACD404D922A925E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B711E4849D1B422380597BDD /* libPods.a */; };
+		840E74A2198A95D300D71D66 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 840E74A1198A95D300D71D66 /* index.html */; };
+		840E74A3198A95D300D71D66 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 840E74A1198A95D300D71D66 /* index.html */; };
 		842653DD19879BCC00AAE358 /* CaptureServerModeIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842653DC19879BCC00AAE358 /* CaptureServerModeIntroViewController.m */; };
 		843B272C1973C904004CD663 /* CustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B272B1973C904004CD663 /* CustomURLProtocol.m */; };
 		8474F4F0196E4163005A4F4D /* CaptureWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8474F4EF196E4163005A4F4D /* CaptureWelcomeViewController.m */; };
@@ -64,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840E74A1198A95D300D71D66 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		842653DB19879BCC00AAE358 /* CaptureServerModeIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureServerModeIntroViewController.h; sourceTree = "<group>"; };
 		842653DC19879BCC00AAE358 /* CaptureServerModeIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureServerModeIntroViewController.m; sourceTree = "<group>"; };
 		843B272A1973C904004CD663 /* CustomURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomURLProtocol.h; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		84B3DCD0196CE37000FE1A06 /* webCapture */ = {
 			isa = PBXGroup;
 			children = (
+				840E74A1198A95D300D71D66 /* index.html */,
 				84B3DCD9196CE37000FE1A06 /* CaptureAppDelegate.h */,
 				84B3DCDA196CE37000FE1A06 /* CaptureAppDelegate.m */,
 				84E6304A1976D064000E8DDD /* CaptureServer.h */,
@@ -340,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840E74A3198A95D300D71D66 /* index.html in Resources */,
 				8479AE6C1987D36000C8A1E6 /* Images.xcassets in Resources */,
 				8479AE6D1987D36000C8A1E6 /* InfoPlist.strings in Resources */,
 				8479AE761987D3E700C8A1E6 /* taobao-Info.plist in Resources */,
@@ -352,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3DCE3196CE37000FE1A06 /* Images.xcassets in Resources */,
+				840E74A2198A95D300D71D66 /* index.html in Resources */,
 				84B3DCD5196CE37000FE1A06 /* InfoPlist.strings in Resources */,
 				84B3DCDE196CE37000FE1A06 /* Main.storyboard in Resources */,
 			);

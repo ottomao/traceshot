@@ -1,23 +1,30 @@
 ### Intro
 Traceshot is a tool for web developers to evaluate the web page loading performance visually. 
 
-By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.
+By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. **The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.**
 
 Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn't it ?
 
 ### Screenshots
-![http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png](http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png_760x760.jpg)
+![ui interface](http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png_760x760.jpg)
+
+![sample result](http://gtms02.alicdn.com/tps/i2/TB1nPnpFVXXXXaUXXXXHN0MUpXX-2800-885.jpg_760x760.jpg)
 
 ### Server Mode
 
-When working as a server, Traceshot can run tasks assigned by its RESTful API.
+When working as a server, Traceshot can run tasks assigned by its RESTful API. What's more, you could start a task remotely via its web interface.
 
 **Features**
 
 * Traceshot won't do any callback when tasks are finished. You have to fetch the result manually. You may either fetch it by a scheduled task, or just roughly by polling.
 * The task result image is transferred as base64, jpg
 * Only one task can be dealed at the same time
-* There is no concept like task queue in server, you have to implement it on your http client
+* There is no concept like task queue in server, you have to implement it on your own http client
+
+**Screenshots for web interface**
+
+* ![web interface](http://gtms02.alicdn.com/tps/i2/TB1KpzmFVXXXXbMXpXXJ11QJFXX-2586-1620.png_640x640.jpg)
+
 
 ### RESTful API of server mode
 
@@ -46,7 +53,7 @@ When working as a server, Traceshot can run tasks assigned by its RESTful API.
 #### fetch result
 * Sample: fetch the result of lastest test
 * Req: ```http://SERVER:PORT/?action=fetch```
-* Res: ```{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk...```
+* Res: ```{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk..."}```
 
 ### Contact
 * Author: **Otto Mao** ,from China
