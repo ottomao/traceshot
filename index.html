@@ -19,105 +19,75 @@
         <p>a tool for web developers to evaluate the web page loading performance visually</p>
 
         <p class="view"><a href="https://github.com/ottomao/traceshot">View the Project on GitHub <small>ottomao/traceshot</small></a></p>
+        <p class="view">Download via AppStore (coming soon）</p>
 
 
+        <!--         
         <ul>
           <li><a href="https://github.com/ottomao/traceshot/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/ottomao/traceshot/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/ottomao/traceshot">View On <strong>GitHub</strong></a></li>
         </ul>
-      </header>
+         -->
+       </header>
       <section>
-        <h3>
-<a name="intro" class="anchor" href="#intro"><span class="octicon octicon-link"></span></a>Intro</h3>
-
+       <h3 id="intro">Intro</h3>
 <p>Traceshot is a tool for web developers to evaluate the web page loading performance visually. </p>
-
 <p>By taking snapshots periodically, Traceshot will give you a collection of all the snapshots duration the loading process. <strong>The test results given by Traceshot will be more reliable and meaningful, since the test is run on a real device with a real network condition.</strong></p>
-
-<p>Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn't it ?</p>
-
-<h3>
-<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h3>
-
+<p>Besides, Traceshot can be used as a server. In other words, you may establish your own real-device test server for the whole team by using some RESTful API. It is so cool, isn&#39;t it ?</p>
+<h3 id="screenshots">Screenshots</h3>
 <p><img src="http://gtms04.alicdn.com/tps/i4/TB1n6C_FVXXXXXaXpXXCKHiPpXX-2800-1600.png_760x760.jpg" alt="ui interface"></p>
-
 <p><img src="http://gtms02.alicdn.com/tps/i2/TB1nPnpFVXXXXaUXXXXHN0MUpXX-2800-885.jpg_760x760.jpg" alt="sample result"></p>
-
-<h3>
-<a name="server-mode" class="anchor" href="#server-mode"><span class="octicon octicon-link"></span></a>Server Mode</h3>
-
-<p>When working as a server, Traceshot can run tasks assigned by its RESTful API. What's more, you could start a task remotely via its web interface.</p>
-
+<h3 id="server-mode">Server Mode</h3>
+<p>When working as a server, Traceshot can run tasks assigned by its RESTful API. What&#39;s more, you could start a task remotely via its web interface.</p>
 <p><strong>Features</strong></p>
-
 <ul>
-<li>Traceshot won't do any callback when tasks are finished. You have to fetch the result manually. You may either fetch it by a scheduled task, or just roughly by polling.</li>
+<li>Traceshot won&#39;t do any callback when tasks are finished. You have to fetch the result manually. You may either fetch it by a scheduled task, or just roughly by polling.</li>
 <li>The task result image is transferred as base64, jpg</li>
 <li>Only one task can be dealed at the same time</li>
 <li>There is no concept like task queue in server, you have to implement it on your own http client</li>
-</ul><p><strong>Screenshots for web interface</strong></p>
-
+</ul>
+<p><strong>Screenshots for web interface</strong></p>
 <ul>
 <li><img src="http://gtms02.alicdn.com/tps/i2/TB1KpzmFVXXXXbMXpXXJ11QJFXX-2586-1620.png_640x640.jpg" alt="web interface"></li>
-</ul><h3>
-<a name="restful-api-of-server-mode" class="anchor" href="#restful-api-of-server-mode"><span class="octicon octicon-link"></span></a>RESTful API of server mode</h3>
-
-<h4>
-<a name="basic-form" class="anchor" href="#basic-form"><span class="octicon octicon-link"></span></a>basic form</h4>
-
+</ul>
+<h3 id="restful-api-of-server-mode">RESTful API of server mode</h3>
+<h4 id="basic-form">basic form</h4>
 <ul>
 <li>All the apis are called with this pattern: <code>http://SERVER:PORT/?action=ACTION_NAME&amp;paraA=VALUE_A&amp;paraB=VALUE_B</code> </li>
-<li>A sample client written in nodejs can be found in <a href="https://github.com/ottomao/traceshot/tree/master/httpClient_sample_nodejs">httpClient_sample_nodejs</a>
-</li>
-</ul><h4>
-<a name="query-status" class="anchor" href="#query-status"><span class="octicon octicon-link"></span></a>query status</h4>
-
+<li>A sample client written in nodejs can be found in <a href="https://github.com/ottomao/traceshot/tree/master/httpClient_sample_nodejs">httpClient_sample_nodejs</a></li>
+</ul>
+<h4 id="query-status">query status</h4>
 <ul>
 <li>Sample: query whether the test server is busy</li>
-<li>Req: <code>http://SERVER:PORT/?action=status</code>
-</li>
-<li>Res: <code>{"success":true,"isIdle":true}</code>
-</li>
-</ul><h4>
-<a name="start-a-task" class="anchor" href="#start-a-task"><span class="octicon octicon-link"></span></a>start a task</h4>
-
+<li>Req: <code>http://SERVER:PORT/?action=status</code></li>
+<li>Res: <code>{&quot;success&quot;:true,&quot;isIdle&quot;:true}</code></li>
+</ul>
+<h4 id="start-a-task">start a task</h4>
 <ul>
-<li>Sample: start a test task with url <em><a href="http://sample.com?t=1">http://sample.com?t=1</a></em> , screen shot interval <em>0.2s</em> , lasts <em>20s</em>
-</li>
-<li>Req: <code>http://SERVER:PORT/?action=shot&amp;url=http%3A%2F%2Fsample.com%3Ft%3D1&amp;interval=0.2s&amp;duration=20s</code>
-</li>
-<li>Res-success:<code>
-{"success":true,"taskId":1}</code>
-</li>
-<li>Res-error:<code>{"success":false,"reason":"another task is on the fly now"}</code>
-</li>
-</ul><h4>
-<a name="stop-a-task" class="anchor" href="#stop-a-task"><span class="octicon octicon-link"></span></a>stop a task</h4>
-
+<li>Sample: start a test task with url <em><a href="http://sample.com?t=1">http://sample.com?t=1</a></em> , screen shot interval <em>0.2s</em> , lasts <em>20s</em></li>
+<li>Req: <code>http://SERVER:PORT/?action=shot&amp;url=http%3A%2F%2Fsample.com%3Ft%3D1&amp;interval=0.2s&amp;duration=20s</code></li>
+<li>Res-success:<code>{&quot;success&quot;:true,&quot;taskId&quot;:1}</code></li>
+<li>Res-error:<code>{&quot;success&quot;:false,&quot;reason&quot;:&quot;another task is on the fly now&quot;}</code></li>
+</ul>
+<h4 id="stop-a-task">stop a task</h4>
 <ul>
 <li>Sample: stop the current task</li>
-<li>Req: <code>http://SERVER:PORT/?action=stop</code>
-</li>
-<li>Res: <code>{"success":true,"stoppedTaskId":3}</code>
-</li>
-</ul><h4>
-<a name="fetch-result" class="anchor" href="#fetch-result"><span class="octicon octicon-link"></span></a>fetch result</h4>
-
+<li>Req: <code>http://SERVER:PORT/?action=stop</code></li>
+<li>Res: <code>{&quot;success&quot;:true,&quot;stoppedTaskId&quot;:3}</code></li>
+</ul>
+<h4 id="fetch-result">fetch result</h4>
 <ul>
 <li>Sample: fetch the result of lastest test</li>
-<li>Req: <code>http://SERVER:PORT/?action=fetch</code>
-</li>
-<li>Res: <code>{"success":true,"taskId":4,"imgBase64":"data:image\/jpeg;base64,\/9j\/4AAQSk..."}</code>
-</li>
-</ul><h3>
-<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h3>
-
+<li>Req: <code>http://SERVER:PORT/?action=fetch</code></li>
+<li>Res: <code>{&quot;success&quot;:true,&quot;taskId&quot;:4,&quot;imgBase64&quot;:&quot;data:image\/jpeg;base64,\/9j\/4AAQSk...&quot;}</code></li>
+</ul>
+<h3 id="contact">Contact</h3>
 <ul>
 <li>Author: <strong>Otto Mao</strong> ,from China</li>
-<li>Email: <strong><a href="mailto:ottomao@gmail.com">ottomao@gmail.com</a></strong>
-</li>
+<li>Email: <strong>ottomao@gmail.com</strong></li>
 </ul>
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/ottomao">ottomao</a></p>
