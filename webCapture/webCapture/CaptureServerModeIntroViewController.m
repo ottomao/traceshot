@@ -31,8 +31,8 @@
     self.automaticallyAdjustsScrollViewInsets = false;
     NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.traceshot.com/#server-mode"]];
     [self.mainWebView loadRequest:req];
-    
-    // Do any additional setup after loading the view.
+
+
 }
 
 - (void)didReceiveMemoryWarning

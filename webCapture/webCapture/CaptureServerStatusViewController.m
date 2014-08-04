@@ -31,7 +31,16 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = false;
     [self.navigationController setNavigationBarHidden:NO animated:NO];
-    // Do any additional setup after loading the view.
+
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    //prevent the app from sleeping
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
+    [self appendLog:@"system idle timer has been disabled successfully. your phone will not go to sleep in server mode"];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -44,9 +53,16 @@
     self.serverStatus.text = [NSString stringWithFormat:@"%@",self.server.webServer.serverURL];
 }
 
+//TODO remove the VC from memory
+- (void)viewDidUnload{
+    NSLog(@"unload");
+}
+
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.server stopServer];
+    
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
 }
 
 - (void)didReceiveMemoryWarning
